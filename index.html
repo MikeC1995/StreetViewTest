@@ -22,6 +22,7 @@
       <street-view view="viewB" key="{{ key }}"></street-view>
       <controls view="viewB"></controls>
     </div>
+    <div id="distance">Distance: {{ distance(viewA.latlng, viewB.latlng) }}</div>
     <!-- Dependencies -->
     <script src="/node_modules/angular/angular.min.js"></script>
 
@@ -29,7 +30,6 @@
     <!-- root -->
     <script src="/app/app.js"></script>
     <script src="/app/street-view/street-view.directive.js"></script>
-    <script src="/app/street-view/street-view.controller.js"></script>
     <script src="/app/controls/controls.directive.js"></script>
   </body>
 </html>

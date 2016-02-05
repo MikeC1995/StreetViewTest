@@ -16,7 +16,7 @@ app.directive('streetView', function() {
           var x =
             'https://maps.googleapis.com/maps/api/streetview?size='
             + v.size
-            + '&location=' + v.lat + ',' + v.lng
+            + '&location=' + v.latlng
             + '&fov=' + v.fov
             + '&heading=' + v.heading
             + '&pitch=' + v.pitch

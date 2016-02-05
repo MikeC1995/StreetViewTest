@@ -1,0 +1,32 @@
+.controls {
+  display: inline-block;
+  form {
+    width: 100%;
+    padding-left: 20px;
+    .labels {
+      width: 100px;
+      display: inline-block;
+      span {
+        display: block;
+        line-height: 30px;
+        padding-right: 15px;
+      }
+    }
+    .inputs {
+      width: 100px;
+      input {
+        width: 200px;
+        height: 30px;
+        box-sizing: border-box;
+        display: block;
+        border: none;
+        border-bottom: 1px solid #000;
+        font-size: 15px;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+}
