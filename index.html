@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <base href="/">
+    <title>StreetViewTest</title>
+    <meta name="description" content="Mike Christensen | StreetViewTest">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Open Graph tags (for e.g. proper display when link shared on Facebook) -->
+    <meta name="og:type" property="og:type" content="website" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/assets/styles/css/app.css">
+  </head>
+
+  <body ng-app="app" ng-controller="appController">
+    <street-view></street-view>
+    <street-view></street-view> 
+
+    <!-- Dependencies -->
+    <script src="/node_modules/angular/angular.min.js"></script>
+
+    <!-- APP SCRIPTS -->
+    <!-- root -->
+    <script src="/app/app.js"></script>
+    <script src="/app/street-view/street-view.directive.js"></script>
+    <script src="/app/street-view/street-view.controller.js"></script>
+  </body>
+</html>

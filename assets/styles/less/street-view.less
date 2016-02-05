@@ -1,0 +1,41 @@
+div {
+  display: inline-block;
+  width: 500px;
+  font-size: 15px;
+  img {
+    width: 100%;
+    height: auto;
+    padding-bottom: 20px;
+  }
+  form {
+    width: 100%;
+    padding-left: 20px;
+    .labels {
+      width: 20%;
+      float: left;
+      text-align: right;
+      span {
+        display: block;
+        line-height: 30px;
+        padding-right: 15px;
+      }
+    }
+    .inputs {
+      width: 80%;
+      float: right;
+      input {
+        width: 100px;
+        height: 30px;
+        box-sizing: border-box;
+        display: block;
+        border: none;
+        border-bottom: 1px solid #000;
+        font-size: 15px;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+}
