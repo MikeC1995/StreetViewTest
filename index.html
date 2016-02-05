@@ -14,9 +14,14 @@
   </head>
 
   <body ng-app="app" ng-controller="appController">
-    <street-view></street-view>
-    <street-view></street-view> 
-
+    <div id="A">
+      <street-view view="viewA" key="{{ key }}"></street-view>
+      <controls view="viewA"></controls>
+    </div>
+    <div id="B">
+      <street-view view="viewB" key="{{ key }}"></street-view>
+      <controls view="viewB"></controls>
+    </div>
     <!-- Dependencies -->
     <script src="/node_modules/angular/angular.min.js"></script>
 
@@ -25,5 +30,6 @@
     <script src="/app/app.js"></script>
     <script src="/app/street-view/street-view.directive.js"></script>
     <script src="/app/street-view/street-view.controller.js"></script>
+    <script src="/app/controls/controls.directive.js"></script>
   </body>
 </html>
