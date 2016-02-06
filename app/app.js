@@ -47,4 +47,7 @@ app.controller('appController', function($scope) {
     return d;
   }
 
+
+  //$scope.computeLatLngMesh({lat: 51.455916, lng: -2.604753}, {lat: 51.466457, lng: -2.566162}, 3);
+
 });
