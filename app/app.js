@@ -46,4 +46,5 @@ app.controller('appController', function($scope) {
     var d = R * c;
     return d;
   }
+
 });
