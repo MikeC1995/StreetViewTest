@@ -56,9 +56,12 @@ app.directive('map', ['loadGoogleMapAPI', function(loadGoogleMapAPI) {
 
         // Adds a marker to the map.
         function addMarker(latlng) {
-          new google.maps.Marker({
+          var marker = new google.maps.Marker({
             position: latlng,
             map: $scope.map
+          });
+          marker.addListener('click', function() {
+            console.log(JSON.stringify(marker.getPosition()));
           });
         }
 
@@ -93,8 +96,8 @@ app.directive('map', ['loadGoogleMapAPI', function(loadGoogleMapAPI) {
         $scope.initialize = function() {
           $scope.sv = new google.maps.StreetViewService();
           $scope.map = new google.maps.Map(document.getElementById($scope.mapId), {
-            zoom: 10,
-            center: {lat: 51.552015, lng: -2.452623}
+            zoom: 15,
+            center: {lat: 51.455916, lng: -2.604753}
           });
 
           google.maps.event.addListener($scope.map, "click", function (e) {
