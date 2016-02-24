@@ -61,7 +61,7 @@ app.directive('map', ['loadGoogleMapAPI', function(loadGoogleMapAPI) {
             map: $scope.map
           });
           marker.addListener('click', function() {
-            console.log(JSON.stringify(marker.getPosition()));
+            console.log(marker.getPosition().lat() + ", " + marker.getPosition().lng());
           });
         }
 

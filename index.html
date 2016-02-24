@@ -18,15 +18,17 @@
       <street-view view="viewA" key="{{ key }}"></street-view>
       <controls view="viewA"></controls>
     </div>
-    <div id="B">
-      <street-view view="viewB" key="{{ key }}"></street-view>
-      <controls view="viewB"></controls>
-    </div>
     <div map id="testMap" class="map"></div>
-    <div id="distance">Distance: {{ distance(viewA.latlng, viewB.latlng) }}</div>
+
+    <form ng-submit="getImages()">
+      <input type="text" placeholder="lat lng" ng-model="latlng"></input>
+      <input type="text" placeholder="Theta" ng-model="theta"></input>
+      <button type="submit">Get images!</button>
+    </form>
+
     <!-- Dependencies -->
     <script src="/node_modules/angular/angular.min.js"></script>
-
+    <script src="/app/FileSaver.js"></script>
     <!-- APP SCRIPTS -->
     <!-- root -->
     <script src="/app/app.js"></script>
