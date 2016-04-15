@@ -18,7 +18,8 @@
       <street-view view="viewA" key="{{ key }}"></street-view>
       <controls view="viewA"></controls>
     </div>
-    <div map id="testMap" class="map"></div>
+    <div map id="testMap" class="map" get-places="getPlaces"></div>
+    <button ng-click="getPlaces(latlng)">Get Places</button>
 
     <form ng-submit="getImages()">
       <input type="text" placeholder="lat lng" ng-model="latlng"></input>
