@@ -9,14 +9,17 @@ app.directive('map', ['loadGoogleMapAPI', function(loadGoogleMapAPI) {
         getPlaces: '='
       },
       controller: ['$scope', function($scope) {
-        $scope.density = 20;  // density of street view point mesh
+        $scope.density = 10;  // density of street view point mesh
         $scope.coords = [];   // list of street view-able lat-lng coords
 
         // Writes the mesh coords to a text file and saves to computer
         function saveCoords() {
           var coordsString = "";
           for(var i = 0; i < $scope.coords.length; i++) {
-            coordsString += ($scope.coords[i].lat + "," + $scope.coords[i].lng + ":");
+            coordsString += ($scope.coords[i].lat + "," + $scope.coords[i].lng);
+            if(i < $scope.coords.length - 1) {
+               coordsString += ":";
+            }
           }
           var blob = new Blob([coordsString], {type: "text/plain;charset=utf-8"});
           saveAs(blob, "coords.txt");
